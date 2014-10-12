@@ -9,9 +9,18 @@
  */
 angular.module('simpleSampleAngularAppApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+      $scope.todo = {
+        item: '',
+        list: []
+      };
+
+      $scope.submit = function () {
+        $scope.todo.list.push($scope.form.item);
+        $scope.form.item = "";
+      };
+
+      $scope.remove = function (index) {
+        $scope.todo.list.splice(index, 1);
+      };
+
   });

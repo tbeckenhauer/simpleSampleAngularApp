@@ -1,0 +1,13 @@
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 1em auto;
+}
+
+.icon-on-hover .glyphicon {
+  visibility: hidden;
+}
+.icon-on-hover:hover .glyphicon {
+  visibility: visible;
+  cursor: pointer;
+}
