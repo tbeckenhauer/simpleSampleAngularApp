@@ -1,13 +1,15 @@
-.list-reset {
-  list-style: none;
-  padding: 0;
-  margin: 1em auto;
-}
-
-.icon-on-hover .glyphicon {
+.tmb-hovercon .tmb-hovercon{
   visibility: hidden;
 }
-.icon-on-hover:hover .glyphicon {
+.tmb-hovercon:hover .tmb-hovercon{
   visibility: visible;
-  cursor: pointer;
+}
+
+.color-red {
+  color: red;
+}
+
+.margin-horizontal-small {
+  margin-left: 3px;
+  margin-right: 3px;
 }

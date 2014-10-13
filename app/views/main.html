@@ -1,13 +1,17 @@
 <div class="jumbotron">
-  <form name="form" ng-submit="submit()">
+  <form role="form" name="form" novalidate ng-submit="form.$valid && submit()">
+    <!-- stackoverflow.com/a/5334825/298240 -->
     <input class="form-control text-center" type="text" name="formItem" ng-model="form.item"
-           required autofocus placeholder="{{$scope.form.placeholder}}"
+           autofocus placeholder="{{$scope.form.placeholder}}" ng-pattern=/^((?!give\sup|giveup|fail|quit).)*$/
            ng-focus="$scope.form.placeholder=''" ng-blur="$scope.form.placeholder='What are we going to accomplish today?'">
+    <br/>
+    <div role="alert" class="alert alert-danger" ng-show="form.formItem.$invalid">I can't let you do that Will Robinson.</div>
   </form>
-  <ol class="text-left list-reset" ui-sortable ng-model="todo.list">
-    <li class="icon-on-hover" ng-repeat="item in todo.list track by $index">
-      <span class="glyphicon glyphicon-remove" ng-click="remove($index)"/>
-      <span class="sortable"> {{item}} </span>
+  <ol tmb-draggable-container class="text-left" ng-model="todo.list">
+    <li tmb-draggable class="tmb-hovercon" ng-repeat="item in todo.list track by $index">
+      <span> {{item}} </span>
+      <span class="tmb-hovercon glyphicon glyphicon-remove pull-right color-red margin-horizontal-small" ng-click="remove($index)"></span>
+      <span tmb-draggable-icon class="glyphicon glyphicon-list pull-right margin-horizontal-small"></span>
     </li>
   </ol>
 </div>
