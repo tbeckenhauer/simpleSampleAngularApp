@@ -4,7 +4,7 @@ angular
       function($http){
         return {
           post: function (data) {
-            $http.post("http://localhost:8080/svc", data)
+            $http.post("http://todo.thomas.beckenhauer.info:8080/svc", data)
           },
           get: function () {
             return $http.get("http://localhost:8080/svc")
