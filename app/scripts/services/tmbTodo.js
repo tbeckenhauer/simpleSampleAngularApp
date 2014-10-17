@@ -7,7 +7,7 @@ angular
             $http.post("http://todo.thomas.beckenhauer.info:8080/svc", data)
           },
           get: function () {
-            return $http.get("http://localhost:8080/svc")
+            return $http.get("http://todo.thomas.beckenhauer.info:8080/svc")
           }
         }
       }]);
