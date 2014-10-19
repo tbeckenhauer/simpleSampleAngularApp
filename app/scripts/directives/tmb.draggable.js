@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('tmbDraggable', [])
   .directive('tmbDraggable', function() {
     return {
@@ -24,13 +26,13 @@ angular.module('tmbDraggable', [])
             .on('dragleave', function () {
               element.css({
                 'border-top': 'none'
-              })
+              });
             })
             .on('drop', function (e) {
               e.stopPropagation && e.stopPropagation();
             })
             .on('dragend', function () {
-                draggableContainer.dropItem()
+              draggableContainer.dropItem();
             });
       }
     };

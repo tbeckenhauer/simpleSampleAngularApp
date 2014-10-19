@@ -17,16 +17,16 @@ angular.module('simpleSampleAngularAppApp')
         };
 
         tmbTodo.get().then(function(response) {
-          $scope.todo.list = JSON.parse(response.data.list)
+          $scope.todo.list = JSON.parse(response.data.list);
         });
 
         $scope.$watchCollection('todo.list', function() {
-          tmbTodo.post($scope.todo.list)
+          tmbTodo.post($scope.todo.list);
         });
 
         $scope.submit = function () {
           $scope.todo.list.push($scope.form.item);
-          $scope.form.item = "";
+          $scope.form.item = '';
         };
 
         $scope.remove = function (index) {

@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('tmbDraggableContainer', [])
   .directive('tmbDraggableContainer', function() {
     return {

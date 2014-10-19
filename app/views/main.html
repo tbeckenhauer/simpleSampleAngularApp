@@ -2,8 +2,7 @@
   <form role="form" name="form" novalidate ng-submit="form.$valid && submit()">
     <!-- stackoverflow.com/a/5334825/298240 -->
     <input class="form-control text-center" type="text" name="formItem" ng-model="form.item"
-           autofocus placeholder="{{$scope.form.placeholder}}" ng-pattern=/^((?!give\sup|giveup|fail|quit).)*$/
-           ng-focus="$scope.form.placeholder=''" ng-blur="$scope.form.placeholder='What are we going to accomplish today?'">
+           autofocus placeholder="What are we going to accomplish today?" ng-pattern=/^((?!give\sup|giveup|fail|quit).)*$/>
     <br/>
     <div role="alert" class="alert alert-danger" ng-show="form.formItem.$invalid">I can't let you do that Will Robinson.</div>
   </form>
