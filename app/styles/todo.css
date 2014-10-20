@@ -5,6 +5,19 @@
   visibility: visible;
 }
 
+.tmb-minus-60px {
+  display: inline-block;
+  width: calc(100% - 60px);
+}
+
+.tmb-wrap-text {
+  word-break: break-all;
+}
+
+.glyphicon {
+  font-size: 1.3em;
+}
+
 .color-red {
   color: red;
 }
