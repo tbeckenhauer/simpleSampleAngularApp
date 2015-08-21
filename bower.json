@@ -2,6 +2,7 @@
   "name": "simple-sample-angular-app",
   "version": "0.0.0",
   "dependencies": {
+    "fontawesome": "4.*.0",
     "bootstrap": "3.*.0",
     "angular": "~1.2.0",
     "json3": "~3.3.1",
