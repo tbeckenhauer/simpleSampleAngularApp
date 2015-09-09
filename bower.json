@@ -2,8 +2,8 @@
   "name": "simple-sample-angular-app",
   "version": "0.0.0",
   "dependencies": {
-    "fontawesome": "4.*.0",
-    "bootstrap": "3.*.0",
+    "font-awesome": "4.x.x",
+    "bootstrap": "3.x.x",
     "angular": "~1.2.0",
     "json3": "~3.3.1",
     "es5-shim": "~3.1.0",
@@ -17,6 +17,20 @@
   "devDependencies": {
     "angular-mocks": "~1.2.0",
     "angular-scenario": "~1.2.0"
+  },
+  "overrides": {
+    "comment": "http://stackoverflow.com/a/32469497/298240",
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css"
+      ]
+    }
   },
   "appPath": "app"
 }
