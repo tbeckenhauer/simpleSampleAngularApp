@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Time how long tasks take. Can help when optimizing build times
-  require('time-grunt')(grunt);
+  //require('time-grunt')(grunt);
 
   // Configurable paths for the application
   var appConfig = {
@@ -351,11 +351,6 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
-      },
-      server: {
-        configFile: 'test/karma.conf.js',
-        singleRun: false,
-        autoWatch: true
       }
     }
   });
@@ -371,6 +366,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'force:karma',
       'connect:livereload',
       'watch'
     ]);
