@@ -10,15 +10,12 @@ angular.module('tmbDraggableContainer', [])
             };
 
         this.dragItem = function (index) {
-          console.log('dragItem');
           drag.source = index;
         };
         this.hoverItem = function (index) {
-          console.log('hoverItem');
           drag.target = index;
         };
         this.dropItem = function () {
-          console.log('dropItem');
           drag.list = [];
           $scope.todo.list.forEach(function (item, i) {
             if (i === drag.source) {

@@ -8,25 +8,19 @@ angular.module('tmbDraggable', [])
       link: function ($scope, element, attrs, draggableContainer) {
         element
             .attr({ draggable: true })
-            .on('dragstart', function () {
-              console.log('dragstart', $scope.$index);
+						.on('dragstart', function (event) {
+							event.originalEvent.dataTransfer.setData('firefox', 'fix');
               draggableContainer.dragItem($scope.$index);
             })
             .on('dragover', function () {
-              console.log('dragover', $scope.$index);
-              console.log(element);
-              debugger;
               draggableContainer.hoverItem($scope.$index);
             })
             .on('dragleave', function () {
-              console.log('dragleave', $scope.$index);
             })
             .on('drop', function (e) {
-              console.log('drop');
               e.stopPropagation && e.stopPropagation();
             })
             .on('dragend', function () {
-              console.log('dragend');
               draggableContainer.dropItem();
             });
       }
