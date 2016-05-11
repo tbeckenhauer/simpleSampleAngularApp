@@ -1,16 +1,21 @@
 <div class="jumbotron">
   <form role="form" name="form" novalidate ng-submit="form.$valid && submit()">
     <!-- stackoverflow.com/a/5334825/298240 -->
-    <input class="form-control text-center" type="text" name="formItem" ng-model="form.item"
-           autofocus placeholder="What are we going to accomplish?" ng-pattern=/^((?!give\sup|giveup|fail|quit).)*$/>
+    <input class="form-control text-center" 
+           type="text"
+           name="formItem" 
+           ng-model="form.item"
+           autofocus 
+           placeholder="What are we going to accomplish?"
+           ng-pattern=/^((?!give\sup|giveup|fail|quit).)*$/>
     <br/>
     <div role="alert" class="alert alert-danger" ng-show="form.formItem.$invalid">I can't let you do that.</div>
   </form>
   <ol tmb-draggable-container class="text-left" ng-model="todo.list">
-    <li tmb-draggable ng-repeat="item in todo.list track by $index">
+    <li tmb-draggable draggable="true" ng-repeat="item in todo.list track by $index">
       <span class="tmb-minus-60px tmb-wrap-text"> {{item}} </span>
       <span class="glyphicon glyphicon-remove pull-right color-red margin-horizontal-small" ng-click="remove($index)"></span>
-      <span tmb-draggable-icon class="glyphicon glyphicon-list pull-right margin-horizontal-small"></span>
+      <span tmb-draggable-icon draggable="true" class="glyphicon glyphicon-list pull-right margin-horizontal-small"></span>
     </li>
   </ol>
 </div>
